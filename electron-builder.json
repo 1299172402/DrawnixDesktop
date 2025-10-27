@@ -17,7 +17,7 @@
         "arch": ["x64"]
       }
     ],
-    "icon": "apps/electron/icon.png"
+    "icon": "build/icon.png"
   },
   "nsis": {
     "oneClick": false,
@@ -34,7 +34,7 @@
       }
     ],
     "category": "public.app-category.graphics-design",
-    "icon": "apps/electron/icon.png"
+    "icon": "build/icon.png"
   },
   "dmg": {
     "contents": [
@@ -52,23 +52,30 @@
   },
   "linux": {
     "target": [
-      // {
-      //   "target": "AppImage",
-      //   "arch": ["x64"]
-      // },
       {
         "target": "deb",
         "arch": ["x64"]
       }
     ],
     "category": "Graphics",
-    "icon": "apps/electron/icon.png"
+    "icon": "build/icon.png",
+    "executableName": "drawnix",
+    "desktop": {
+      "entry": {
+        "Name": "Drawnix",
+        "Comment": "A drawing and diagramming tool",
+        "GenericName": "Drawing Application",
+        "Type": "Application",
+        "Terminal": "false",
+        "StartupNotify": "true",
+        "Categories": "Graphics;VectorGraphics;",
+        "MimeType": "application/x-drawnix;"
+      }
+    }
   },
   "deb": {
     "packageName": "drawnix",
-    "fpm": [
-      "--package", "dist/electron/drawnix.deb"
-    ]
+    "artifactName": "drawnix_${version}_${arch}.${ext}"
   },
   "publish": null
 }
