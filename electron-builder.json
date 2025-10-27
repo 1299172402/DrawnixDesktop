@@ -17,7 +17,7 @@
         "arch": ["x64"]
       }
     ],
-    "icon": "apps/windows/favicon.ico"
+    "icon": "apps/electron/icon.png"
   },
   "nsis": {
     "oneClick": false,
@@ -25,6 +25,50 @@
     "createDesktopShortcut": true,
     "createStartMenuShortcut": true,
     "shortcutName": "Drawnix"
+  },
+  "mac": {
+    "target": [
+      {
+        "target": "dmg",
+        "arch": ["x64", "arm64"]
+      }
+    ],
+    "category": "public.app-category.graphics-design",
+    "icon": "apps/electron/icon.png"
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  },
+  "linux": {
+    "target": [
+      // {
+      //   "target": "AppImage",
+      //   "arch": ["x64"]
+      // },
+      {
+        "target": "deb",
+        "arch": ["x64"]
+      }
+    ],
+    "category": "Graphics",
+    "icon": "apps/electron/icon.png"
+  },
+  "deb": {
+    "packageName": "drawnix",
+    "fpm": [
+      "--package", "dist/electron/drawnix.deb"
+    ]
   },
   "publish": null
 }

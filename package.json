@@ -2,6 +2,10 @@
   "name": "@drawnix/source",
   "version": "0.0.2",
   "license": "MIT",
+  "author": {
+    "name": "之雨",
+    "email": "29673994+1299172402@users.noreply.github.com"
+  },
   "main": "electron-main.js",
   "scripts": {
     "start": "nx serve web --host=0.0.0.0",
@@ -12,7 +16,9 @@
     "release": "node scripts/release-version.js",
     "pub": "npm run build && node scripts/publish.js",
     "electron:dev": "set NODE_ENV=development&& electron .",
-    "electron:build": "npm run build:web && electron-builder --config electron-builder.json"
+    "electron:build:win": "npm run build:web && electron-builder --win --config electron-builder.json",
+    "electron:build:mac": "npm run build:web && electron-builder --mac --config electron-builder.json",
+    "electron:build:linux": "npm run build:web && electron-builder --linux --config electron-builder.json"
   },
   "private": true,
   "dependencies": {

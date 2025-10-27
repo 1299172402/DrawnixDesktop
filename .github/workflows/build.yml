@@ -8,9 +8,9 @@ on:
   workflow_dispatch: 
 
 jobs:
-  build:
+  build-windows:
     runs-on: windows-latest
-
+    
     steps:
     - uses: actions/checkout@v4
 
@@ -19,16 +19,64 @@ jobs:
         node-version: 20
         cache: 'npm'
     
-    - name: npm install
-      run: |
-        npm install
+    - name: Install dependencies
+      run: npm install
 
-    - name: electron build
-      run: npm run electron:build
+    - name: Build Windows
+      run: npm run electron:build:win
 
-    - name: Upload a Build Artifact
+    - name: Upload Windows Installer
       uses: actions/upload-artifact@v4.6.2
       with:
         name: drawnix-windows-installer
         path: dist/electron/*.exe
-        
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 20
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build macOS
+      run: npm run electron:build:mac
+
+    - name: Upload macOS DMG
+      uses: actions/upload-artifact@v4
+      with:
+        name: drawnix-macos-installer
+        path: dist/electron/*.dmg
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 20
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build Linux
+      run: npm run electron:build:linux
+
+    # - name: Upload Linux AppImage
+    #   uses: actions/upload-artifact@v4
+    #   with:
+    #     name: drawnix-linux-appimage
+    #     path: dist/electron/*.AppImage
+
+    - name: Upload Linux DEB
+      uses: actions/upload-artifact@v4
+      with:
+        name: drawnix-linux-deb
+        path: dist/electron/*.deb
