@@ -7,6 +7,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
+    title: 'Drawnix',
     webPreferences: {
       preload: path.join(__dirname, 'electron-preload.js'),
       contextIsolation: true,
@@ -26,6 +27,12 @@ function createWindow() {
   mainWindow.on('closed', function () {
     mainWindow = null;
   });
+}
+
+// 设置应用名称和 WM_CLASS（Linux 任务栏图标识别）
+if (process.platform === 'linux') {
+  app.setName('Drawnix');
+  app.setDesktopName('drawnix.desktop');
 }
 
 app.whenReady().then(() => {
