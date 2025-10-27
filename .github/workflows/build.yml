@@ -22,7 +22,6 @@ jobs:
     - name: npm install
       run: |
         npm install
-        npm install --save-dev electron electron-builder
 
     - name: electron build
       run: npm run electron:build
