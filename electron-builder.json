@@ -58,7 +58,7 @@
       }
     ],
     "category": "Graphics",
-    "icon": "build/icon.png",
+    "icon": "build/icons",
     "executableName": "drawnix",
     "desktop": {
       "entry": {
