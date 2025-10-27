@@ -35,6 +35,12 @@ if (process.platform === 'linux') {
   app.setDesktopName('drawnix.desktop');
 }
 
+// 检测是否在 AppImage 中运行，并处理沙箱问题
+if (process.env.APPIMAGE) {
+  // AppImage 环境下，如果遇到沙箱问题，禁用沙箱
+  app.commandLine.appendSwitch('no-sandbox');
+}
+
 app.whenReady().then(() => {
   createWindow();
 
