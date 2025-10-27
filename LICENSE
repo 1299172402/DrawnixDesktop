@@ -1,4 +1,4 @@
-# Drawtiva License (双重许可证)
+# DrawnixDesktop License (双重许可证)
 
 Copyright (c) 2024-2025 1299172402
 
@@ -8,7 +8,7 @@ Copyright (c) 2024-2025 1299172402
 
 本项目基于 [Drawnix](https://github.com/plait-board/drawnix) 进行开发和打包，Drawnix 项目采用 MIT License 授权。
 
-**Drawtiva 的贡献**：
+**DrawnixDesktop 的贡献**：
 - 为 Windows、macOS 和 Linux 平台进行了 Electron 打包
 - 添加了跨平台构建配置和优化
 - 提供了桌面应用程序版本
@@ -19,7 +19,7 @@ Copyright (c) 2024-2025 1299172402
 - 原始许可证：MIT License
 - 版权所有者：plait-board
 
-根据 MIT License 的要求，原始项目的版权声明和许可证文本已保留在本项目中。Drawtiva 在原始代码基础上的修改和新增内容受本许可证约束。
+根据 MIT License 的要求，原始项目的版权声明和许可证文本已保留在本项目中。DrawnixDesktop 在原始代码基础上的修改和新增内容受本许可证约束。
 
 ---
 
@@ -48,7 +48,7 @@ Copyright (c) 2024-2025 1299172402
 ### 商业授权 (Commercial License)
 
 如需商业使用，请联系版权所有者获取商业许可证：
-- Issue: https://github.com/1299172402/Drawtiva/issues
+- Issue: https://github.com/1299172402/DrawnixDesktop/issues
 
 商业授权将根据使用场景和规模提供定制化方案，并依据不同使用情况决定是否免费授权或收费许可。版权所有者保留根据具体情况灵活制定授权条款和费用的权利。
 
@@ -115,7 +115,7 @@ SOFTWARE.
 ## ⚖️ 许可证兼容性说明 (License Compatibility)
 
 - **原始代码**（来自 Drawnix）：遵循 MIT License
-- **新增内容**（Drawtiva 的贡献）：遵循本双重许可证
+- **新增内容**（DrawnixDesktop 的贡献）：遵循本双重许可证
 - **整体项目**：由于包含 MIT 代码，整体项目的使用需要同时遵守两个许可证的条款
 
-**注意**：对于商业使用，除了需要获得 Drawtiva 的商业授权外，MIT License 部分的代码可以自由用于商业用途（需保留 MIT 版权声明）。
+**注意**：对于商业使用，除了需要获得 DrawnixDesktop 的商业授权外，MIT License 部分的代码可以自由用于商业用途（需保留 MIT 版权声明）。
