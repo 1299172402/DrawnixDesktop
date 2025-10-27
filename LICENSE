@@ -1,3 +1,92 @@
+# Drawtiva License (双重许可证)
+
+Copyright (c) 2024-2025 1299172402
+
+---
+
+## 📦 关于本项目 (About This Project)
+
+本项目基于 [Drawnix](https://github.com/plait-board/drawnix) 进行开发和打包，Drawnix 项目采用 MIT License 授权。
+
+**Drawtiva 的贡献**：
+- 为 Windows、macOS 和 Linux 平台进行了 Electron 打包
+- 添加了跨平台构建配置和优化
+- 提供了桌面应用程序版本
+
+**原始项目**：
+- 项目名称：Drawnix
+- 项目地址：https://github.com/plait-board/drawnix
+- 原始许可证：MIT License
+- 版权所有者：plait-board
+
+根据 MIT License 的要求，原始项目的版权声明和许可证文本已保留在本项目中。Drawtiva 在原始代码基础上的修改和新增内容受本许可证约束。
+
+---
+
+## 📜 许可证条款
+
+### 个人及非商业使用许可 (Free for Personal Use)
+
+本软件及相关文档文件（以下简称"软件"）对于**个人用户、学生、教育机构和非营利组织**免费提供，允许：
+
+✅ **允许的使用**：
+- 个人学习、研究和使用
+- 修改源代码用于个人项目
+- 分享和传播软件（需保留版权声明）
+- 在教育环境中使用
+- 开源项目中使用（需遵守本许可证）
+
+### 商业使用限制 (Commercial Use Restrictions)
+
+❌ **以下商业行为需要获得书面授权**：
+- 将本软件或其衍生品用于商业产品或服务
+- 销售、转售或分发本软件的副本以获取利润
+- 将本软件集成到商业软件中
+- 使用本软件提供付费服务
+- 任何直接或间接通过本软件获取经济利益的行为
+
+### 商业授权 (Commercial License)
+
+如需商业使用，请联系版权所有者获取商业许可证：
+- Issue: https://github.com/1299172402/Drawtiva/issues
+
+商业授权将根据使用场景和规模提供定制化方案，并依据不同使用情况决定是否免费授权或收费许可。版权所有者保留根据具体情况灵活制定授权条款和费用的权利。
+
+---
+
+## 📋 使用条款 (Terms of Use)
+
+1. **归属声明**：使用本软件时必须保留原始版权声明和许可证文本
+2. **修改声明**：如果修改了源代码，必须明确标注修改内容
+3. **禁止误导**：不得暗示您的使用或修改得到了原作者的认可
+4. **分发要求**：分发软件时必须附带本许可证的完整副本
+
+## ⚖️ 免责声明 (Disclaimer)
+
+本软件按"原样"提供，不提供任何明示或暗示的保证，包括但不限于适销性、特定用途适用性和非侵权性的保证。在任何情况下，作者或版权持有人均不对任何索赔、损害或其他责任负责，无论是在合同诉讼、侵权行为还是其他方面。
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+**简而言之**：
+- 🆓 个人使用完全免费
+- 💼 商业使用需要授权
+- 📧 有商业需求请联系作者
+
+---
+
+## 📄 原始项目许可证 (Original Project License)
+
+本项目包含来自 Drawnix 项目的代码，该项目使用 MIT License：
+
+```
 MIT License
 
 Copyright (c) 2024 Drawnix
@@ -19,3 +108,14 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+---
+
+## ⚖️ 许可证兼容性说明 (License Compatibility)
+
+- **原始代码**（来自 Drawnix）：遵循 MIT License
+- **新增内容**（Drawtiva 的贡献）：遵循本双重许可证
+- **整体项目**：由于包含 MIT 代码，整体项目的使用需要同时遵守两个许可证的条款
+
+**注意**：对于商业使用，除了需要获得 Drawtiva 的商业授权外，MIT License 部分的代码可以自由用于商业用途（需保留 MIT 版权声明）。
