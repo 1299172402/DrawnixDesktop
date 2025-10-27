@@ -29,6 +29,7 @@ jobs:
         run: |
           git remote add upstream https://github.com/plait-board/drawnix.git || true
           git fetch upstream develop
+          git fetch upstream --tags
       
       - name: Sync with upstream develop
         run: |
@@ -37,3 +38,4 @@ jobs:
       - name: Push changes
         run: |
           git push origin upstream-mirror --force
+          git push origin --tags --force
