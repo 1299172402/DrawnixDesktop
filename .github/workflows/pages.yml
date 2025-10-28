@@ -1,0 +1,79 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+      - 'README_en.md'
+      - 'LICENSE'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Create site directory
+        run: mkdir -p _site
+      
+      - name: Convert README to index.html
+        uses: jaywcjlove/markdown-to-html-cli@main
+        with:
+          source: README.md
+          output: _site/index.html
+          github-corners: https://github.com/${{ github.repository }}
+          title: 'Drawnix - 桌面版'
+      
+      - name: Convert README_EN to HTML
+        uses: jaywcjlove/markdown-to-html-cli@main
+        with:
+          source: README_en.md
+          output: _site/readme-en.html
+          github-corners: https://github.com/${{ github.repository }}
+          title: 'Drawnix - Desktop'
+      
+      - name: Convert LICENSE to HTML
+        uses: jaywcjlove/markdown-to-html-cli@main
+        with:
+          source: LICENSE
+          output: _site/license.html
+          github-corners: https://github.com/${{ github.repository }}
+          title: 'DrawnixDesktop - License'
+      
+      - name: Add navigation to pages
+        run: |
+          # Add navigation bar to each page
+          for file in _site/*.html; do
+            sed -i '/<body>/a \
+            <nav style="background: #f6f8fa; padding: 15px; border-radius: 6px; margin: 20px 0;">\
+              <a href="index.html" style="margin-right: 15px; text-decoration: none; color: #0969da;">🏠 中文</a>\
+              <a href="readme-en.html" style="margin-right: 15px; text-decoration: none; color: #0969da;">🌍 English</a>\
+              <a href="license.html" style="text-decoration: none; color: #0969da;">📄 License</a>\
+            </nav>' "$file"
+          done
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

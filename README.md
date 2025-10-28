@@ -27,7 +27,7 @@
   </figure>
 </div>
 
-[*English README*](https://github.com/1299172402/DrawnixDesktop/blob/main/README_en.md)
+[*English README*](README_en.md)
 
 ## 💻 桌面版特性
 
