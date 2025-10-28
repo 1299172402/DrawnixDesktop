@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'README.md'
-      - 'README_en.md'
+      - 'pages/README.md'
+      - 'pages/README_en.md'
       - 'LICENSE'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -80,7 +80,7 @@ jobs:
       - name: Convert README to index.html
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
-          source: README.md
+          source: pages/README.md
           output: _site/index.html
           config: config-zh.json
       
@@ -90,7 +90,7 @@ jobs:
       - name: Convert README_EN to HTML
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
-          source: README_en.md
+          source: pages/README_en.md
           output: _site/README_en.md.html
           config: config-en.json
       

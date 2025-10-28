@@ -29,67 +29,15 @@
 
 [*English README*](README_en.md)
 
-
 ## 📦 下载桌面版
 
 ### 🪟 Windows
 
-<div align="left">
-  <p>
-    <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-Setup-x64.exe" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #0078D6 0%, #0078D6 100%); color: white; box-shadow: 0 4px 6px rgba(0,120,214,0.3);">
-      🪟 Windows Setup (x64)
-    </a>
-    <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-Portable-x64.exe" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #00A4EF 0%, #00A4EF 100%); color: white; box-shadow: 0 4px 6px rgba(0,164,239,0.3);">
-      💼 Windows Portable (x64)
-    </a>
-  </p>
-</div>
-
-### 🍎 Apple
-
-<div align="left">
-  <p>
-    <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-x64.dmg" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #555555 0%, #333333 100%); color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
-      🍎 macOS Intel (x64)
-    </a>
-    <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-arm64.dmg" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #333333 0%, #000000 100%); color: white; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
-      🍎 macOS Apple Silicon (ARM64)
-    </a>
-  </p>
-</div>
-
-### 🐧 Linux
-
-<div align="left">
-  <p>
-    <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/drawnix.deb" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #E95420 0%, #E95420 100%); color: white; box-shadow: 0 4px 6px rgba(233,84,32,0.3);">
-      🐧 Linux DEB
-    </a>
-    <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix.AppImage" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #34A853 0%, #34A853 100%); color: white; box-shadow: 0 4px 6px rgba(52,168,83,0.3);">
-      🐧 Linux AppImage
-    </a>
-  </p>
-</div>
-
-### 🔗 所有版本
-
-<div align="left">
-  <p>
-    <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #5865F2 0%, #5865F2 100%); color: white; box-shadow: 0 4px 6px rgba(88,101,242,0.3);">
-      📦 查看所有版本
-    </a>
-  </p>
-</div>
-
-<!--
-
-### 🪟 Windows
-
 <p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-Setup-x64.exe">
+  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-win-x64-Setup.exe">
     <img src="https://img.shields.io/badge/Windows-Setup%20(x64)-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Setup" />
   </a>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-Portable-x64.exe">
+  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-win-x64-Portable.exe">
     <img src="https://img.shields.io/badge/Windows-Portable%20(x64)-00A4EF?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Portable" />
   </a>
 </p>
@@ -97,10 +45,10 @@
 ### 🍎 macOS
 
 <p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-x64.dmg">
+  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-mac-x64.dmg">
     <img src="https://img.shields.io/badge/macOS-Intel%20(x64)-555555?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Intel" />
   </a>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-arm64.dmg">
+  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-mac-arm64.dmg">
     <img src="https://img.shields.io/badge/macOS-Apple%20Silicon-333333?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Apple Silicon" />
   </a>
 </p>
@@ -108,10 +56,10 @@
 ### 🐧 Linux
 
 <p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/drawnix.deb">
+  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-linux-amd64.deb">
     <img src="https://img.shields.io/badge/Linux-DEB-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Linux DEB" />
   </a>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix.AppImage">
+  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-linux-x86_64.AppImage">
     <img src="https://img.shields.io/badge/Linux-AppImage-34A853?style=for-the-badge&logo=linux&logoColor=white" alt="Linux AppImage" />
   </a>
 </p>
@@ -123,8 +71,6 @@
     <img src="https://img.shields.io/badge/查看所有版本-Release-5865F2?style=for-the-badge&logo=github&logoColor=white" alt="所有版本" />
   </a>
 </p>
-
--->
 
 ## 💻 桌面版特性
 
@@ -165,4 +111,4 @@
 
 <div align="center">
   <sub>Created with ❤️ by <a href="https://github.com/1299172402">之雨</a> on 🌏</sub>
-</div>  
+</div>
