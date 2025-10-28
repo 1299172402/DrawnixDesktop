@@ -33,44 +33,22 @@
 
 ### 🪟 Windows
 
-<p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-win-x64-Setup.exe">
-    <img src="https://img.shields.io/badge/Windows-Setup%20(x64)-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Setup" />
-  </a>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-win-x64-Portable.exe">
-    <img src="https://img.shields.io/badge/Windows-Portable%20(x64)-00A4EF?style=for-the-badge&logo=windows&logoColor=white" alt="Windows Portable" />
-  </a>
-</p>
+[![Windows Setup](https://img.shields.io/badge/Windows-Setup%20(x64)-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-win-x64-Setup.exe)
+[![Windows Portable](https://img.shields.io/badge/Windows-Portable%20(x64)-00A4EF?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-win-x64-Portable.exe)
 
 ### 🍎 macOS
 
-<p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-mac-x64.dmg">
-    <img src="https://img.shields.io/badge/macOS-Intel%20(x64)-555555?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Intel" />
-  </a>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-mac-arm64.dmg">
-    <img src="https://img.shields.io/badge/macOS-Apple%20Silicon-333333?style=for-the-badge&logo=apple&logoColor=white" alt="macOS Apple Silicon" />
-  </a>
-</p>
+[![macOS Intel](https://img.shields.io/badge/macOS-Intel%20(x64)-555555?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-mac-x64.dmg)
+[![macOS Apple Silicon](https://img.shields.io/badge/macOS-Apple%20Silicon-333333?style=for-the-badge&logo=apple&logoColor=white)](https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-mac-arm64.dmg)
 
 ### 🐧 Linux
 
-<p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-linux-amd64.deb">
-    <img src="https://img.shields.io/badge/Linux-DEB-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Linux DEB" />
-  </a>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-linux-x86_64.AppImage">
-    <img src="https://img.shields.io/badge/Linux-AppImage-34A853?style=for-the-badge&logo=linux&logoColor=white" alt="Linux AppImage" />
-  </a>
-</p>
+[![Linux DEB](https://img.shields.io/badge/Linux-DEB-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-linux-amd64.deb)
+[![Linux AppImage](https://img.shields.io/badge/Linux-AppImage-34A853?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/1299172402/DrawnixDesktop/releases/latest/download/Drawnix-linux-x86_64.AppImage)
 
 ### 🔗 All Releases
 
-<p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases">
-    <img src="https://img.shields.io/badge/View%20All%20Releases-Release-5865F2?style=for-the-badge&logo=github&logoColor=white" alt="All Releases" />
-  </a>
-</p>
+[![All Releases](https://img.shields.io/badge/View%20All%20Releases-Release-5865F2?style=for-the-badge&logo=github&logoColor=white)](https://github.com/1299172402/DrawnixDesktop/releases)
 
 ## 💻 Desktop Edition Features
 
