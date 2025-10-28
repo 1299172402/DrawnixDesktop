@@ -38,11 +38,14 @@ jobs:
           github-corners: https://github.com/${{ github.repository }}
           title: 'Drawnix - 桌面版'
       
+      - name: Copy README as README.md.html
+        run: cp _site/index.html _site/README.md.html
+      
       - name: Convert README_EN to HTML
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
           source: README_en.md
-          output: _site/readme-en.html
+          output: _site/README_en.md.html
           github-corners: https://github.com/${{ github.repository }}
           title: 'Drawnix - Desktop'
       
@@ -50,21 +53,9 @@ jobs:
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
           source: LICENSE
-          output: _site/license.html
+          output: _site/LICENSE.html
           github-corners: https://github.com/${{ github.repository }}
           title: 'DrawnixDesktop - License'
-      
-      - name: Add navigation to pages
-        run: |
-          # Add navigation bar to each page
-          for file in _site/*.html; do
-            sed -i '/<body>/a \
-            <nav style="background: #f6f8fa; padding: 15px; border-radius: 6px; margin: 20px 0;">\
-              <a href="index.html" style="margin-right: 15px; text-decoration: none; color: #0969da;">🏠 中文</a>\
-              <a href="readme-en.html" style="margin-right: 15px; text-decoration: none; color: #0969da;">🌍 English</a>\
-              <a href="license.html" style="text-decoration: none; color: #0969da;">📄 License</a>\
-            </nav>' "$file"
-          done
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
