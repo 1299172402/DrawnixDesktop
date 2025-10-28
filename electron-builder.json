@@ -87,8 +87,8 @@
     }
   },
   "deb": {
-    "packageName": "drawnix",
-    "artifactName": "drawnix_${version}_${arch}.${ext}"
+    "packageName": "Drawnix",
+    "artifactName": "Drawnix-${version}-${arch}.${ext}"
   },
   "appImage": {
     "artifactName": "Drawnix-${version}-${arch}.${ext}",
