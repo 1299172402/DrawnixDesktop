@@ -15,6 +15,10 @@
       {
         "target": "nsis",
         "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
       }
     ],
     "icon": "build/icon.png"
@@ -24,9 +28,14 @@
     "allowToChangeInstallationDirectory": true,
     "createDesktopShortcut": true,
     "createStartMenuShortcut": true,
-    "shortcutName": "Drawnix"
+    "shortcutName": "Drawnix",
+    "artifactName": "Drawnix-${version}-${arch}-Setup.${ext}"
+  },
+  "portable": {
+    "artifactName": "Drawnix-${version}-${arch}-Portable.${ext}"
   },
   "mac": {
+    "artifactName": "Drawnix-${version}-${arch}.${ext}",
     "target": [
       {
         "target": "dmg",
