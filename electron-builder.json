@@ -29,13 +29,13 @@
     "createDesktopShortcut": true,
     "createStartMenuShortcut": true,
     "shortcutName": "Drawnix",
-    "artifactName": "Drawnix-${version}-${arch}-Setup.${ext}"
+    "artifactName": "Drawnix-${os}-${arch}-Setup.${ext}"
   },
   "portable": {
-    "artifactName": "Drawnix-${version}-${arch}-Portable.${ext}"
+    "artifactName": "Drawnix-${os}-${arch}-Portable.${ext}"
   },
   "mac": {
-    "artifactName": "Drawnix-${version}-${arch}.${ext}",
+    "artifactName": "Drawnix-${os}-${arch}.${ext}",
     "target": [
       {
         "target": "dmg",
@@ -88,10 +88,10 @@
   },
   "deb": {
     "packageName": "Drawnix",
-    "artifactName": "Drawnix-${version}-${arch}.${ext}"
+    "artifactName": "Drawnix-${os}-${arch}.${ext}"
   },
   "appImage": {
-    "artifactName": "Drawnix-${version}-${arch}.${ext}",
+    "artifactName": "Drawnix-${os}-${arch}.${ext}",
     "synopsis": "A drawing and diagramming tool",
     "category": "Graphics"
   },
