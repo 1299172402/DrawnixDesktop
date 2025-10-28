@@ -33,7 +33,7 @@
 
 <div style="text-align: center; margin: 20px 0;">
   <button onclick="toggleMirror()" id="mirror-btn" style="padding: 10px 20px; border-radius: 8px; border: 2px solid #667eea; background: white; color: #667eea; font-weight: bold; cursor: pointer; font-size: 14px; transition: all 0.3s;">
-    🚀 启用镜像加速
+    🌍 未镜像加速，通过原始源下载
   </button>
   <p style="font-size: 12px; color: #666; margin-top: 8px;">
     中国大陆用户可启用镜像加速下载
@@ -50,7 +50,7 @@ function toggleMirror() {
   const mirrorPrefix = 'https://gh-proxy.com/';
   
   if (useMirror) {
-    btn.textContent = '🌍 使用官方源';
+    btn.textContent = '🚀 镜像加速中';
     btn.style.background = '#667eea';
     btn.style.color = 'white';
     links.forEach(link => {
@@ -59,7 +59,7 @@ function toggleMirror() {
       }
     });
   } else {
-    btn.textContent = '🚀 启用镜像加速';
+    btn.textContent = '🌍 未镜像加速，通过原始源下载';
     btn.style.background = 'white';
     btn.style.color = '#667eea';
     links.forEach(link => {
@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function() {
     useMirror = true;
     const btn = document.getElementById('mirror-btn');
     if (btn) {
-      btn.textContent = '🌍 使用官方源';
+      btn.textContent = '🚀 镜像加速中';
       btn.style.background = '#667eea';
       btn.style.color = 'white';
     }
