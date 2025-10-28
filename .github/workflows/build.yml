@@ -2,6 +2,15 @@ name: Build
 
 on:
   workflow_dispatch: 
+    inputs:
+      publish:
+        description: 'Publish release to GitHub'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
 
 jobs:
   build-windows:
@@ -88,3 +97,24 @@ jobs:
       with:
         name: drawnix-linux-appimage
         path: dist/electron/*.AppImage
+
+
+  publish:
+    needs: [build-windows, build-macos, build-linux]
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.publish == 'true' }}
+    
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: artifacts
+    
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: artifacts/**/*
+        draft: true
+        generate_release_notes: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
