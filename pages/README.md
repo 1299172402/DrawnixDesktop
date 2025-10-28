@@ -31,6 +31,68 @@
 
 ## 📦 下载桌面版
 
+<div style="text-align: center; margin: 20px 0;">
+  <button onclick="toggleMirror()" id="mirror-btn" style="padding: 10px 20px; border-radius: 8px; border: 2px solid #667eea; background: white; color: #667eea; font-weight: bold; cursor: pointer; font-size: 14px; transition: all 0.3s;">
+    🚀 启用镜像加速
+  </button>
+  <p style="font-size: 12px; color: #666; margin-top: 8px;">
+    中国大陆用户可启用镜像加速下载
+  </p>
+</div>
+
+<script>
+let useMirror = localStorage.getItem('useMirror') === 'true';
+
+function toggleMirror() {
+  useMirror = !useMirror;
+  const btn = document.getElementById('mirror-btn');
+  const links = document.querySelectorAll('a[href*="github.com/1299172402/DrawnixDesktop"]');
+  const mirrorPrefix = 'https://gh-proxy.com/';
+  
+  if (useMirror) {
+    btn.textContent = '🌍 使用官方源';
+    btn.style.background = '#667eea';
+    btn.style.color = 'white';
+    links.forEach(link => {
+      if (!link.href.includes(mirrorPrefix)) {
+        link.href = mirrorPrefix + link.href;
+      }
+    });
+  } else {
+    btn.textContent = '🚀 启用镜像加速';
+    btn.style.background = 'white';
+    btn.style.color = '#667eea';
+    links.forEach(link => {
+      link.href = link.href.replace(mirrorPrefix, '');
+    });
+  }
+  
+  localStorage.setItem('useMirror', useMirror);
+}
+
+// 自动为中文用户启用镜像
+window.addEventListener('DOMContentLoaded', function() {
+  const isChina = /cn|zh/i.test(navigator.language);
+  if (useMirror || (isChina && !localStorage.getItem('useMirror'))) {
+    useMirror = true;
+    const btn = document.getElementById('mirror-btn');
+    if (btn) {
+      btn.textContent = '🌍 使用官方源';
+      btn.style.background = '#667eea';
+      btn.style.color = 'white';
+    }
+    const links = document.querySelectorAll('a[href*="github.com/1299172402/DrawnixDesktop"]');
+    const mirrorPrefix = 'https://gh-proxy.com/';
+    links.forEach(link => {
+      if (!link.href.includes(mirrorPrefix)) {
+        link.href = mirrorPrefix + link.href;
+      }
+    });
+    localStorage.setItem('useMirror', 'true');
+  }
+});
+</script>
+
 ### 🪟 Windows
 
 <p>
