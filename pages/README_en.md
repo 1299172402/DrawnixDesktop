@@ -67,7 +67,7 @@
 ### 🔗 All Releases
 
 <p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #5865F2 0%, #5865F2 100%); color: white; box-shadow: 0 4px 6px rgba(88,101,242,0.3);">
+  <a href="https://github.com/1299172402/DrawnixDesktop/releases" style="display: inline-block; padding: 12px 24px; margin: 8px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 14px; background: linear-gradient(135deg, #5865F2 0%, #5865F2 100%); color: white; box-shadow: 0 4px 6px rgba(88,101,242,0.3);">
     📦 View All Releases
   </a>
 </p>

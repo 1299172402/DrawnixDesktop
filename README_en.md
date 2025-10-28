@@ -67,7 +67,7 @@
 ### 🔗 All Releases
 
 <p>
-  <a href="https://github.com/1299172402/DrawnixDesktop/releases/latest">
+  <a href="https://github.com/1299172402/DrawnixDesktop/releases">
     <img src="https://img.shields.io/badge/View%20All%20Releases-Release-5865F2?style=for-the-badge&logo=github&logoColor=white" alt="All Releases" />
   </a>
 </p>
