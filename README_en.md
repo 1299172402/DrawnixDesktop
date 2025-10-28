@@ -1,8 +1,8 @@
 <p align="center">
   <picture style="width: 320px">
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/1299172402/DrawnixDesktop/blob/develop/apps/web/public/logo/logo_drawnix_h.svg?raw=true" />
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/1299172402/DrawnixDesktop/blob/develop/apps/web/public/logo/logo_drawnix_h_dark.svg?raw=true" />
-    <img src="https://github.com/1299172402/DrawnixDesktop/blob/develop/apps/web/public/logo/logo_drawnix_h.svg?raw=true" width="360" alt="Drawnix logo and name" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/1299172402/DrawnixDesktop/blob/main/apps/web/public/logo/logo_drawnix_h.svg?raw=true" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/1299172402/DrawnixDesktop/blob/main/apps/web/public/logo/logo_drawnix_h_dark.svg?raw=true" />
+    <img src="https://github.com/1299172402/DrawnixDesktop/blob/main/apps/web/public/logo/logo_drawnix_h.svg?raw=true" width="360" alt="Drawnix logo and name" />
   </picture>
 </p>
 <div align="center">
@@ -17,7 +17,7 @@
 <div align="center">
   <figure>
     <a target="_blank" rel="noopener">
-      <img src="https://github.com/1299172402/DrawnixDesktop/blob/develop/apps/web/public/product_showcase/case-2.png" alt="Product showcase" width="80%" />
+      <img src="https://github.com/1299172402/DrawnixDesktop/blob/main/apps/web/public/product_showcase/case-2.png" alt="Product showcase" width="80%" />
     </a>
     <figcaption>
       <p align="center">

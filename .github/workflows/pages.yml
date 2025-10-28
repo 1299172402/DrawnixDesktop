@@ -30,13 +30,59 @@ jobs:
       - name: Create site directory
         run: mkdir -p _site
       
+      - name: Copy favicon
+        run: cp apps/web/public/favicon.ico _site/favicon.ico
+      
+      - name: Create config for Chinese README
+        run: |
+          cat > config-zh.json << 'EOF'
+          {
+            "markdown-to-html": {
+              "document": {
+                "title": "Drawnix - 桌面版",
+                "description": "开源白板工具，一体化白板，包含思维导图、流程图、自由画等"
+              },
+              "favicon": "./favicon.ico",
+              "github-corners": "https://github.com/${{ github.repository }}"
+            }
+          }
+          EOF
+      
+      - name: Create config for English README
+        run: |
+          cat > config-en.json << 'EOF'
+          {
+            "markdown-to-html": {
+              "document": {
+                "title": "Drawnix - Desktop Edition",
+                "description": "Open-source whiteboard tool with mind mapping, flowcharts, and freehand drawing"
+              },
+              "favicon": "./favicon.ico",
+              "github-corners": "https://github.com/${{ github.repository }}"
+            }
+          }
+          EOF
+      
+      - name: Create config for LICENSE
+        run: |
+          cat > config-license.json << 'EOF'
+          {
+            "markdown-to-html": {
+              "document": {
+                "title": "DrawnixDesktop - License"
+              },
+              "favicon": "./favicon.ico",
+              "github-corners": "https://github.com/${{ github.repository }}"
+            }
+          }
+          EOF
+      
       - name: Convert README to index.html
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
           source: README.md
           output: _site/index.html
-          github-corners: https://github.com/${{ github.repository }}
-          title: 'Drawnix - 桌面版'
+          config: config-zh.json
       
       - name: Copy README as README.md.html
         run: cp _site/index.html _site/README.md.html
@@ -46,16 +92,14 @@ jobs:
         with:
           source: README_en.md
           output: _site/README_en.md.html
-          github-corners: https://github.com/${{ github.repository }}
-          title: 'Drawnix - Desktop'
+          config: config-en.json
       
       - name: Convert LICENSE to HTML
         uses: jaywcjlove/markdown-to-html-cli@main
         with:
           source: LICENSE
           output: _site/LICENSE.html
-          github-corners: https://github.com/${{ github.repository }}
-          title: 'DrawnixDesktop - License'
+          config: config-license.json
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
