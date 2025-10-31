@@ -54,7 +54,7 @@ function toggleMirror() {
     btn.style.background = '#667eea';
     btn.style.color = 'white';
     links.forEach(link => {
-      if (!link.href.includes(mirrorPrefix)) {
+      if (!link.href.includes(mirrorPrefix) && !link.href.endsWith('/releases')) {
         link.href = mirrorPrefix + link.href;
       }
     });
@@ -84,7 +84,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('a[href*="github.com/1299172402/DrawnixDesktop"]');
     const mirrorPrefix = 'https://gh-proxy.com/';
     links.forEach(link => {
-      if (!link.href.includes(mirrorPrefix)) {
+      if (!link.href.includes(mirrorPrefix) && !link.href.endsWith('/releases')) {
         link.href = mirrorPrefix + link.href;
       }
     });
