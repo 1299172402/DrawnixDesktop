@@ -42,8 +42,7 @@ jobs:
                 "title": "Drawnix - 桌面版",
                 "description": "开源白板工具，一体化白板，包含思维导图、流程图、自由画等"
               },
-              "favicon": "./favicon.ico",
-              "github-corners": "https://github.com/${{ github.repository }}"
+              "favicon": "./favicon.ico"
             }
           }
           EOF
@@ -57,8 +56,7 @@ jobs:
                 "title": "Drawnix - Desktop Edition",
                 "description": "Open-source whiteboard tool with mind mapping, flowcharts, and freehand drawing"
               },
-              "favicon": "./favicon.ico",
-              "github-corners": "https://github.com/${{ github.repository }}"
+              "favicon": "./favicon.ico"
             }
           }
           EOF
@@ -71,8 +69,7 @@ jobs:
               "document": {
                 "title": "DrawnixDesktop - License"
               },
-              "favicon": "./favicon.ico",
-              "github-corners": "https://github.com/${{ github.repository }}"
+              "favicon": "./favicon.ico"
             }
           }
           EOF
@@ -82,6 +79,7 @@ jobs:
         with:
           source: pages/README.md
           output: _site/index.html
+          github-corners: https://github.com/${{ github.repository }}
           config: config-zh.json
       
       - name: Copy README as README.md.html
@@ -92,6 +90,7 @@ jobs:
         with:
           source: pages/README_en.md
           output: _site/README_en.md.html
+          github-corners: https://github.com/${{ github.repository }}
           config: config-en.json
       
       - name: Convert LICENSE to HTML
@@ -99,6 +98,7 @@ jobs:
         with:
           source: LICENSE
           output: _site/LICENSE.html
+          github-corners: https://github.com/${{ github.repository }}
           config: config-license.json
       
       - name: Setup Pages
