@@ -2,15 +2,6 @@ name: Build Android APK
 
 on:
   workflow_dispatch:
-    inputs:
-      build_type:
-        description: 'Build type (debug or release)'
-        required: true
-        type: choice
-        options:
-          - debug
-          - release
-        default: debug
 
 permissions:
   contents: write
@@ -50,27 +41,24 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x android/gradlew
     
-    # Debug 构建
-    - name: Build Debug APK
-      if: ${{ github.event.inputs.build_type == 'debug' || github.event.inputs.build_type == '' }}
-      run: |
-        cd android
-        ./gradlew assembleDebug --no-daemon
-        cd ..
-    
-    # Release 构建（需要配置签名）
     - name: Build Release APK
-      if: ${{ github.event.inputs.build_type == 'release' }}
       env:
         KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
         KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
         KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
         KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
       run: |
-        # 解码 keystore
+        # 解码 keystore 到 android/app 目录
         if [ -n "$KEYSTORE_BASE64" ]; then
           echo "$KEYSTORE_BASE64" | base64 -d > android/app/release.keystore
+          echo "✅ Keystore 文件已解码"
+        else
+          echo "❌ 错误：未找到 ANDROID_KEYSTORE_BASE64 secret"
+          exit 1
         fi
+        
+        # 设置签名环境变量
+        export KEYSTORE_FILE="release.keystore"
         
         cd android
         ./gradlew assembleRelease --no-daemon
@@ -98,18 +86,8 @@ jobs:
           exit 1
         fi
     
-    - name: Upload Debug APK
-      if: ${{ github.event.inputs.build_type == 'debug' || github.event.inputs.build_type == '' }}
-      uses: actions/upload-artifact@v4
-      with:
-        name: drawnix-android-debug-apk
-        path: ${{ steps.apk_info.outputs.apk_path }}
-        retention-days: 30
-    
     - name: Upload Release APK
-      if: ${{ github.event.inputs.build_type == 'release' }}
       uses: actions/upload-artifact@v4
       with:
         name: drawnix-android-release-apk
         path: ${{ steps.apk_info.outputs.apk_path }}
-        retention-days: 90
