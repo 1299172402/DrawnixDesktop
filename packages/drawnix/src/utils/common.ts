@@ -1,5 +1,7 @@
 import { IS_APPLE, IS_MAC, PlaitBoard, toImage, ToImageOptions } from '@plait/core';
 import type { ResolutionType } from './utility-types';
+import { isNativePlatform } from './platform';
+import { saveImageNative } from './native-file';
 
 export const isPromiseLike = (
   value: any
@@ -60,7 +62,14 @@ export const boardToImage = (
   });
 };
 
-export function download(blob: Blob | MediaSource, filename: string) {
+export async function download(blob: Blob | MediaSource, filename: string) {
+  // 如果在原生平台（Android/iOS），使用 Capacitor API
+  if (isNativePlatform() && blob instanceof Blob) {
+    await saveImageNative(blob, filename);
+    return;
+  }
+  
+  // Web 平台使用原有的方式
   const a = document.createElement('a');
   const url = window.URL.createObjectURL(blob);
   a.href = url;

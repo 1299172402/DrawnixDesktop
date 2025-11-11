@@ -5,6 +5,8 @@ import {
   supported as nativeFileSystemSupported,
 } from 'browser-fs-access';
 import { MIME_TYPES } from '../constants';
+import { isNativePlatform } from '../utils/platform';
+import { saveFileNative } from '../utils/native-file';
 
 type FILE_EXTENSION = Exclude<keyof typeof MIME_TYPES, 'binary'>;
 
@@ -37,7 +39,7 @@ export const fileOpen = <M extends boolean | undefined = false>(opts: {
   }) as Promise<RetType>;
 };
 
-export const fileSave = (
+export const fileSave = async (
   blob: Blob | Promise<Blob>,
   opts: {
     /** supply without the extension */
@@ -49,10 +51,21 @@ export const fileSave = (
     fileHandle?: FileSystemHandle | null;
   }
 ) => {
+  const filename = `${opts.name}.${opts.extension}`;
+  
+  // 如果在原生平台（Android/iOS），使用 Capacitor API
+  if (isNativePlatform()) {
+    const resolvedBlob = await Promise.resolve(blob);
+    const mimeType = MIME_TYPES[opts.extension];
+    await saveFileNative(resolvedBlob, filename, mimeType);
+    return null; // 原生平台不返回 FileSystemHandle
+  }
+  
+  // Web 平台使用原有的方式
   return _fileSave(
     blob,
     {
-      fileName: `${opts.name}.${opts.extension}`,
+      fileName: filename,
       description: opts.description,
       extensions: [`.${opts.extension}`],
     },
