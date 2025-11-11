@@ -64,30 +64,9 @@ jobs:
         ./gradlew assembleRelease --no-daemon
         cd ..
     
-    - name: Get APK path and info
-      id: apk_info
-      run: |
-        if [ "${{ github.event.inputs.build_type }}" = "release" ]; then
-          APK_PATH=$(find android/app/build/outputs/apk/release -name "*.apk" | head -n 1)
-          BUILD_TYPE="release"
-        else
-          APK_PATH=$(find android/app/build/outputs/apk/debug -name "*.apk" | head -n 1)
-          BUILD_TYPE="debug"
-        fi
-        
-        if [ -f "$APK_PATH" ]; then
-          APK_SIZE=$(du -h "$APK_PATH" | cut -f1)
-          echo "apk_path=$APK_PATH" >> $GITHUB_OUTPUT
-          echo "apk_size=$APK_SIZE" >> $GITHUB_OUTPUT
-          echo "build_type=$BUILD_TYPE" >> $GITHUB_OUTPUT
-          echo "✅ APK 构建成功: $APK_PATH (大小: $APK_SIZE)"
-        else
-          echo "❌ 未找到 APK 文件"
-          exit 1
-        fi
-    
     - name: Upload Release APK
       uses: actions/upload-artifact@v4
       with:
         name: drawnix-android-release-apk
-        path: ${{ steps.apk_info.outputs.apk_path }}
+        path: |
+          android/app/build/outputs/apk/release/*.apk
