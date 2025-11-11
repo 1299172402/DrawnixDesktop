@@ -18,10 +18,22 @@
     "electron:dev": "set NODE_ENV=development&& electron .",
     "electron:build:win": "npm run build:web && electron-builder --win --config electron-builder.json",
     "electron:build:mac": "npm run build:web && electron-builder --mac --config electron-builder.json",
-    "electron:build:linux": "npm run build:web && electron-builder --linux --config electron-builder.json"
+    "electron:build:linux": "npm run build:web && electron-builder --linux --config electron-builder.json",
+    "android:build": "npm run build:web && npx cap sync android",
+    "android:dev": "npm run build:android && npx cap open android",
+    "android:run": "npm run build:android && npx cap run android"
   },
   "private": true,
   "dependencies": {
+    "@capacitor/android": "^7.4.4",
+    "@capacitor/app": "^7.1.0",
+    "@capacitor/cli": "^7.4.4",
+    "@capacitor/core": "^7.4.4",
+    "@capacitor/device": "^7.0.2",
+    "@capacitor/filesystem": "^7.1.4",
+    "@capacitor/keyboard": "^7.0.3",
+    "@capacitor/share": "^7.0.2",
+    "@capacitor/status-bar": "^7.0.3",
     "@floating-ui/react": "^0.26.24",
     "@plait-board/markdown-to-drawnix": "^0.0.7",
     "@plait-board/mermaid-to-drawnix": "^0.0.7",
