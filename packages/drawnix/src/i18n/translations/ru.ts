@@ -68,6 +68,11 @@ const ruTranslations: Translations = {
   'general.duplicate': 'Дублировать',
   'general.delete': 'Удалить',
 
+  'general.copyToClipboard': 'Копировать в буфер обмена',
+  'general.copyToClipboard.svg': 'SVG',
+  'general.copyToClipboard.pngWithoutBackground': 'PNG (без фона)',
+  'general.copyToClipboard.pngWithBackground': 'PNG (с фоном)',
+
   // Language
   'language.switcher': 'Language',
   'language.chinese': '中文',

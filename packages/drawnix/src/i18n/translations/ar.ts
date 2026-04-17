@@ -68,6 +68,11 @@ const arTranslations: Translations = {
     "general.duplicate": "تكرار",
     "general.delete": "حذف",
 
+    "general.copyToClipboard": "نسخ إلى الحافظة",
+    "general.copyToClipboard.svg": "SVG",
+    "general.copyToClipboard.pngWithoutBackground": "PNG (بدون خلفية)",
+    "general.copyToClipboard.pngWithBackground": "PNG (مع خلفية)",
+
     // Language
     "language.switcher": "اللغة",
     "language.chinese": "中文",
