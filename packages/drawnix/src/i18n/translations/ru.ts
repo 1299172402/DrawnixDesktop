@@ -22,6 +22,8 @@ const ruTranslations: Translations = {
   'toolbar.shape.ellipse': 'Эллипс — O',
   'toolbar.shape.triangle': 'Треугольник',
   'toolbar.shape.terminal': 'Останов',
+  'toolbar.shape.noteCurlyLeft': 'Фигурная заметка — слева',
+  'toolbar.shape.noteCurlyRight': 'Фигурная заметка — справа',
   'toolbar.shape.diamond': 'Ромб',
   'toolbar.shape.parallelogram': 'Параллелограмм',
   'toolbar.shape.roundRectangle': 'Скруглённый прямоугольник',
@@ -31,7 +33,7 @@ const ruTranslations: Translations = {
   'zoom.out': 'Уменьшить — Cmd+-',
   'zoom.fit': 'По размеру экрана',
   'zoom.100': 'Сбросить к 100%',
-  
+
   // Themes
   'theme.default': 'Стандартная',
   'theme.colorful': 'Красочная',
@@ -62,30 +64,38 @@ const ruTranslations: Translations = {
   'general.undo': 'Отменить',
   'general.redo': 'Вернуть',
   'general.menu': 'Меню приложения',
+  'general.moreOptions': 'Дополнительно',
   'general.duplicate': 'Дублировать',
   'general.delete': 'Удалить',
-  
+
+  'general.copyToClipboard': 'Копировать в буфер обмена',
+  'general.copyToClipboard.svg': 'SVG',
+  'general.copyToClipboard.pngWithoutBackground': 'PNG (без фона)',
+  'general.copyToClipboard.pngWithBackground': 'PNG (с фоном)',
+
   // Language
   'language.switcher': 'Language',
   'language.chinese': '中文',
   'language.english': 'English',
   'language.russian': 'Русский',
   'language.arabic': 'عربي',
-  
+  'language.vietnamese': 'Tiếng Việt',
+
   // Menu items
   'menu.open': 'Открыть',
   'menu.saveFile': 'Сохранить',
   'menu.exportImage': 'Экспортировать',
+  'menu.exportImage.svg': 'SVG',
   'menu.exportImage.png': 'PNG',
   'menu.exportImage.jpg': 'JPG',
   'menu.cleanBoard': 'Очистить доску',
   'menu.github': 'GitHub',
-  
+
   // Dialog translations
   'dialog.mermaid.title': 'Mermaid в Drawnix',
   'dialog.mermaid.description': 'Поддерживаются',
   'dialog.mermaid.flowchart': 'блок-схемы',
-  'dialog.mermaid.sequence': 'диаграммы последовательностей', 
+  'dialog.mermaid.sequence': 'диаграммы последовательностей',
   'dialog.mermaid.class': 'диаграммы классов',
   'dialog.mermaid.otherTypes':
     ' и другие диаграммы (преобразуются в изображения).',
@@ -102,7 +112,7 @@ const ruTranslations: Translations = {
   'dialog.markdown.preview': 'Предпросмотр',
   'dialog.markdown.insert': 'Вставить',
   'dialog.error.loadMermaid': 'Не удалось загрузить библотеку Mermaid',
-  
+
   // Extra tools menu items
   'extraTools.mermaidToDrawnix': 'Mermaid в Drawnix',
   'extraTools.markdownToDrawnix': 'Markdown в Drawnix',
@@ -119,10 +129,12 @@ const ruTranslations: Translations = {
 
   // Tool popup items
   'popupToolbar.fillColor': 'Цвет заливки',
+  'popupToolbar.fontSize': 'Размер шрифта',
   'popupToolbar.fontColor': 'Цвет текста',
   'popupToolbar.link': 'Вставить ссылку',
   'popupToolbar.stroke': 'Контур',
-  
+  'popupToolbar.opacity': 'Прозрачность',
+
   // Text placeholders
   'textPlaceholders.link': 'Ссылка',
   'textPlaceholders.text': 'Текст',
@@ -152,7 +164,7 @@ const ruTranslations: Translations = {
   - What can run 🐞 🚀
     - then do not touch it 🛑 ✋
       - 👾 💥 🏹 🎯
-    
+
   ## Boy or girl 👶 ❓ 🤷 ♂️ ♀️
 
   ### Hello world 👋 🌍 ✨ 💻
@@ -162,10 +174,18 @@ const ruTranslations: Translations = {
   // Draw elements text
   'draw.lineText': 'Текст',
   'draw.geometryText': 'Текст',
-  
+
   // Mind map elements text
   'mind.centralText': 'Центральная тема',
   'mind.abstractNodeText': 'Резюме',
+
+  'tutorial.title': 'Drawnix',
+  'tutorial.description':
+    'Универсальная доска: майнд-карты, блок-схемы, свободное рисование и многое другое',
+  'tutorial.dataDescription': 'Все данные хранятся локально в вашем браузере',
+  'tutorial.appToolbar': 'Экспорт, настройки языка, ...',
+  'tutorial.creationToolbar': 'Выберите инструмент, чтобы начать творить',
+  'tutorial.themeDescription': 'Переключение между светлой и тёмной темами',
 };
 
 export default ruTranslations;

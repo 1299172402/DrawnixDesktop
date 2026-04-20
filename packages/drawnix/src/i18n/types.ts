@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 // Define supported languages
-export type Language = 'zh' | 'en' | 'ru' | 'ar';
+export type Language = 'zh' | 'en' | 'ru' | 'ar' | 'vi';
 
 // Define translation keys and their corresponding values
 export interface Translations {
@@ -26,6 +26,8 @@ export interface Translations {
   'toolbar.shape.ellipse': string;
   'toolbar.shape.triangle': string;
   'toolbar.shape.terminal': string;
+  'toolbar.shape.noteCurlyLeft': string;
+  'toolbar.shape.noteCurlyRight': string;
   'toolbar.shape.diamond': string;
   'toolbar.shape.parallelogram': string;
   'toolbar.shape.roundRectangle': string;
@@ -66,8 +68,13 @@ export interface Translations {
   'general.undo': string;
   'general.redo': string;
   'general.menu': string;
+  'general.moreOptions': string;
   'general.duplicate': string;
   'general.delete': string;
+  'general.copyToClipboard': string;
+  'general.copyToClipboard.svg': string;
+  'general.copyToClipboard.pngWithoutBackground': string;
+  'general.copyToClipboard.pngWithBackground': string;
 
   // Language
   'language.switcher': string;
@@ -75,11 +82,13 @@ export interface Translations {
   'language.english': string;
   'language.russian': string;
   'language.arabic': string;
+  'language.vietnamese': string;
 
   // Menu items
   'menu.open': string;
   'menu.saveFile': string;
   'menu.exportImage': string;
+  'menu.exportImage.svg': string;
   'menu.exportImage.png': string;
   'menu.exportImage.jpg': string;
   'menu.cleanBoard': string;
@@ -118,9 +127,11 @@ export interface Translations {
 
   // Tool popup items
   'popupToolbar.fillColor': string;
+  'popupToolbar.fontSize': string;
   'popupToolbar.fontColor': string;
   'popupToolbar.link': string;
   'popupToolbar.stroke': string;
+  'popupToolbar.opacity': string;
 
   // Text placeholders
   'textPlaceholders.link': string;

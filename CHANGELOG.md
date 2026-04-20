@@ -1,3 +1,57 @@
+## 0.4.0 (2026-04-19)
+
+
+### 🚀 Features
+
+- add index.css export ([59f8356](https://github.com/plait-board/drawnix/commit/59f8356))
+- **copy-clipboard:** 新增复制到剪贴板功能（SVG / PNG） ([#395](https://github.com/plait-board/drawnix/pull/395))
+- **freehand:** freehand preset color and thickness ([eafb5ce](https://github.com/plait-board/drawnix/commit/eafb5ce))
+- **freehand:** 基于 freehand-presets 的画笔更新 ([#390](https://github.com/plait-board/drawnix/pull/390))
+- **shapes:** support both curly note  of left and curly note of right ([42736b8](https://github.com/plait-board/drawnix/commit/42736b8))
+- **text:** support custom font-size #374 ([#374](https://github.com/plait-board/drawnix/issues/374))
+- **theme-color:** this pr will improve the issue of saving and loading of the theme color will resolve three problems below: 1. load theme color when fresh browser 2. save theme when save to json and support load it from json 3. save as jpg,svg support backgroundColor ([4be66dc](https://github.com/plait-board/drawnix/commit/4be66dc))
+- **toolbar:** add More Options dropdown with duplicate/delete shortcuts ([#386](https://github.com/plait-board/drawnix/pull/386))
+
+### 🩹 Fixes
+
+- bump @plait-board/markdown-to-drawnix to fix issue mentioned in https://github.com/plait-board/drawnix/issues/345 ([79ee568](https://github.com/plait-board/drawnix/commit/79ee568))
+- **freehand:** prevent from hitting the freehand when click the center of closed freehand which does not include fill property and cancel default fill for closed freehand in themes FreehandThemeColors ([#376](https://github.com/plait-board/drawnix/pull/376))
+- **size-slider:** stop handled key propagation ([#391](https://github.com/plait-board/drawnix/pull/391))
+- **text:** fix focus fail issue after add text through dblclick ([a046d15](https://github.com/plait-board/drawnix/commit/a046d15))
+
+### ❤️  Thank You
+
+- dodola @dodolalorc
+- Nightt @nightt5879
+- No.96 @474176409
+- pubuzhixing8 @pubuzhixing8
+- renyang@lu @lurenyang418
+- Andy Lu (Lu, Yu-An) @NaoCoding
+
+## 0.4.0-2 (2025-12-05)
+
+This was a version bump only, there were no code changes.
+
+## 0.4.0-1 (2025-12-05)
+
+
+### 🚀 Features
+
+- improve i18n ([4e44c7b](https://github.com/plait-board/drawnix/commit/4e44c7b))
+- **export:** support export as svg #278 This pr will support export-as-svg feature, it depend on the `toSvgData` method from `plait/core`. ([#278](https://github.com/plait-board/drawnix/issues/278))
+- **i18n:** add Vietnamese translations for UI elements ([892b627](https://github.com/plait-board/drawnix/commit/892b627))
+
+### 🩹 Fixes
+
+- add "babel-plugin-macros": "^3.1.0" to resolve `npm ci` error in ([2940a09](https://github.com/plait-board/drawnix/commit/2940a09))
+- add tooltip, fix get wrong percentage, change cursor when not allowed ([#318](https://github.com/plait-board/drawnix/pull/318))
+
+### ❤️  Thank You
+
+- Phạm Viết Nghĩa @vigstudio
+- pubuzhixing8 @pubuzhixing8
+- Six
+
 ## 0.4.0-0 (2025-11-10)
 
 

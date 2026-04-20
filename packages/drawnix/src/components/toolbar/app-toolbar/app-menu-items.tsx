@@ -17,7 +17,7 @@ import {
 import { loadFromJSON, saveAsJSON } from '../../../data/json';
 import MenuItem from '../../menu/menu-item';
 import MenuItemLink from '../../menu/menu-item-link';
-import { saveAsImage } from '../../../utils/image';
+import { saveAsImage, saveAsSvg } from '../../../utils/image';
 import { useDrawnix } from '../../../hooks/use-drawnix';
 import { useI18n } from '../../../i18n';
 import Menu from '../../menu/menu';
@@ -54,7 +54,9 @@ export const OpenFile = () => {
   ) => {
     board.children = value;
     board.viewport = viewport || { zoom: 1 };
-    board.theme = theme || { themeColorMode: ThemeColorMode.default };
+    if (theme) {
+      board.theme = theme;
+    }
     listRender.update(board.children, {
       board: board,
       parent: board,
@@ -67,7 +69,7 @@ export const OpenFile = () => {
       data-testid="open-button"
       onSelect={() => {
         loadFromJSON(board).then((data) => {
-          clearAndLoad(data.elements, data.viewport);
+          clearAndLoad(data.elements, data.viewport, data.theme);
         });
       }}
       icon={OpenFileIcon}
@@ -96,6 +98,14 @@ export const SaveAsImage = () => {
           });
           menuContentProps.onSelect?.(itemSelectEvent);
         }}>
+          <MenuItem
+            onSelect={() => {
+              saveAsSvg(board);
+            }}
+            aria-label={t('menu.exportImage.svg')}
+          >
+            {t('menu.exportImage.svg')}
+          </MenuItem>
           <MenuItem
             onSelect={() => {
               saveAsImage(board, true);
