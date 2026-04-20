@@ -17,9 +17,9 @@ jobs:
     runs-on: windows-latest
     
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v6
       with:
         node-version: 20
         cache: 'npm'
@@ -31,13 +31,13 @@ jobs:
       run: npm run electron:build:win
 
     - name: Upload Windows Installer
-      uses: actions/upload-artifact@v4.6.2
+      uses: actions/upload-artifact@v7
       with:
         name: drawnix-windows-installer
         path: dist/electron/*-Setup.exe
 
     - name: Upload Windows Portable
-      uses: actions/upload-artifact@v4.6.2
+      uses: actions/upload-artifact@v7
       with:
         name: drawnix-windows-portable
         path: dist/electron/*-Portable.exe
@@ -45,9 +45,9 @@ jobs:
   build-macos:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v6
       with:
         node-version: 20
         cache: 'npm'
@@ -59,13 +59,13 @@ jobs:
       run: npm run electron:build:mac
 
     - name: Upload macOS DMG (x64)
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: drawnix-macos-installer-x64
         path: dist/electron/*-x64.dmg
     
     - name: Upload macOS DMG (arm64)
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: drawnix-macos-installer-arm64
         path: dist/electron/*-arm64.dmg
@@ -73,9 +73,9 @@ jobs:
   build-linux:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
 
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v6
       with:
         node-version: 20
         cache: 'npm'
@@ -87,13 +87,13 @@ jobs:
       run: npm run electron:build:linux
 
     - name: Upload Linux DEB
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: drawnix-linux-deb
         path: dist/electron/*.deb
 
     - name: Upload Linux AppImage
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: drawnix-linux-appimage
         path: dist/electron/*.AppImage
@@ -103,22 +103,22 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Setup Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v6
       with:
         node-version: 20
         cache: 'npm'
     
     - name: Setup Java
-      uses: actions/setup-java@v4
+      uses: actions/setup-java@v5
       with:
         distribution: 'temurin'
         java-version: '21'
     
     - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
+      uses: android-actions/setup-android@v3.2.1
     
     - name: Install dependencies
       run: npm install
@@ -156,7 +156,7 @@ jobs:
         cd ..
     
     - name: Upload Release APK
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: drawnix-android-universal
         path: |
@@ -169,12 +169,12 @@ jobs:
     
     steps:
     - name: Download all artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v8
       with:
         path: artifacts
     
     - name: Create Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v3
       with:
         files: artifacts/**/*
         draft: true
