@@ -22,6 +22,8 @@ const zhTranslations: Translations = {
   'toolbar.shape.ellipse': '圆 — O',
   'toolbar.shape.triangle': '三角形',
   'toolbar.shape.terminal': '椭圆角矩形',
+  'toolbar.shape.noteCurlyLeft': '左花括注释',
+  'toolbar.shape.noteCurlyRight': '右花括注释',
   'toolbar.shape.diamond': '菱形',
   'toolbar.shape.parallelogram': '平行四边形',
   'toolbar.shape.roundRectangle': '圆角矩形',
@@ -62,8 +64,14 @@ const zhTranslations: Translations = {
   'general.undo': '撤销',
   'general.redo': '重做',
   'general.menu': '应用菜单',
+  'general.moreOptions': '更多选项',
   'general.duplicate': '复制',
   'general.delete': '删除',
+
+  'general.copyToClipboard': '复制到剪贴板',
+  'general.copyToClipboard.svg': 'SVG',
+  'general.copyToClipboard.pngWithoutBackground': 'PNG（无背景）',
+  'general.copyToClipboard.pngWithBackground': 'PNG（含背景）',
 
   // Language
   'language.switcher': 'Language',
@@ -71,11 +79,12 @@ const zhTranslations: Translations = {
   'language.english': 'English',
   'language.russian': 'Русский',
   'language.arabic': 'عربي',
-  
+  'language.vietnamese': 'Tiếng Việt',
   // Menu items
   'menu.open': '打开',
   'menu.saveFile': '保存文件',
   'menu.exportImage': '导出图片',
+  'menu.exportImage.svg': 'SVG',
   'menu.exportImage.png': 'PNG',
   'menu.exportImage.jpg': 'JPG',
   'menu.cleanBoard': '清除画布',
@@ -114,10 +123,12 @@ const zhTranslations: Translations = {
 
   // Tool popup items
   'popupToolbar.fillColor': '填充颜色',
+  'popupToolbar.fontSize': '字号',
   'popupToolbar.fontColor': '字体颜色',
   'popupToolbar.link': '链接',
   'popupToolbar.stroke': '边框',
-  
+  'popupToolbar.opacity': '不透明度',
+
   // Text placeholders
   'textPlaceholders.link': '链接',
   'textPlaceholders.text': '文本',
@@ -136,30 +147,30 @@ const zhTranslations: Translations = {
   // Draw elements text
   'draw.lineText': '文本',
   'draw.geometryText': '文本',
-  
+
   // Mind map elements text
   'mind.centralText': '中心主题',
   'mind.abstractNodeText': '摘要',
 
   //markdown example
   'markdown.example': `# 我开始了
-  
+
   - 让我看看是谁搞出了这个 bug 🕵️ ♂️ 🔍
     - 😯 💣
       - 原来是我 👈 🎯 💘
-  
+
   - 竟然不可以运行，为什么呢 🚫 ⚙️ ❓
     - 竟然可以运行了，为什么呢？🎢 ✨
       - 🤯 ⚡ ➡️ 🎉
-  
+
   - 能运行起来的 🐞 🚀
     - 就不要去动它 🛑 ✋
       - 👾 💥 🏹 🎯
-      
+
   ## 男孩还是女孩 👶 ❓ 🤷 ♂️ ♀️
-  
+
   ### Hello world 👋 🌍 ✨ 💻
-  
+
   #### 哇 是个程序员 🤯 ⌨️ 💡 👩 💻`,
 
   'tutorial.title': 'Drawnix',
@@ -168,7 +179,6 @@ const zhTranslations: Translations = {
   'tutorial.appToolbar': '导出，语言设置，...',
   'tutorial.creationToolbar': '选择一个工具开始你的创作',
   'tutorial.themeDescription': '在明亮和黑暗主题之间切换',
-
 };
 
 export default zhTranslations;

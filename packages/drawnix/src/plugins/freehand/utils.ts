@@ -12,6 +12,11 @@ import {
 } from '@plait/core';
 import { Freehand, FreehandShape, FreehandThemeColors } from './type';
 import {
+  DEFAULT_FREEHAND_PRESETS,
+  type FreehandDrawOptions,
+  resolveFreehandDrawOptions,
+} from './presets';
+import {
   DefaultDrawStyle,
   isClosedCustomGeometry,
   isClosedPoints,
@@ -19,19 +24,38 @@ import {
   isRectangleHitRotatedPoints,
 } from '@plait/draw';
 
+type FreehandAppState = {
+  activeFreehandPresetIndex?: number;
+  freehandPresets?: FreehandDrawOptions[];
+};
+
 export function getFreehandPointers() {
   return [FreehandShape.feltTipPen, FreehandShape.eraser];
 }
 
+export const getFreehandDrawOptions = (board: PlaitBoard) => {
+  const appState = (board as PlaitBoard & { appState?: FreehandAppState })
+    .appState;
+  const activePresetIndex = appState?.activeFreehandPresetIndex || 0;
+  const activePreset =
+    appState?.freehandPresets?.[activePresetIndex] ||
+    DEFAULT_FREEHAND_PRESETS[activePresetIndex] ||
+    DEFAULT_FREEHAND_PRESETS[0];
+
+  return resolveFreehandDrawOptions(activePreset);
+};
+
 export const createFreehandElement = (
   shape: FreehandShape,
-  points: Point[]
+  points: Point[],
+  drawOptions: Partial<FreehandDrawOptions> = {}
 ): Freehand => {
   const element: Freehand = {
     id: idCreator(),
     type: 'freehand',
     shape,
     points,
+    ...resolveFreehandDrawOptions(drawOptions),
   };
   return element;
 };
@@ -43,7 +67,8 @@ export const isHitFreehand = (
 ) => {
   const antiPoint = rotateAntiPointsByElement(board, point, element) || point;
   const points = element.points;
-  if (isClosedPoints(element.points)) {
+  const fill = getFillByElement(board, element);
+  if (isClosedPoints(element.points) && fill && fill !== 'none') {
     return (
       isPointInPolygon(antiPoint, points) || isHitPolyLine(points, antiPoint)
     );

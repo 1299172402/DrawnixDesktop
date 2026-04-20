@@ -21,6 +21,8 @@ const arTranslations: Translations = {
     "toolbar.shape.ellipse": "بيضاوي — O",
     "toolbar.shape.triangle": "مثلث",
     "toolbar.shape.terminal": "نهائي",
+    "toolbar.shape.noteCurlyLeft": "ملاحظة معقوفة — يسار",
+    "toolbar.shape.noteCurlyRight": "ملاحظة معقوفة — يمين",
     "toolbar.shape.diamond": "معين",
     "toolbar.shape.parallelogram": "متوازي أضلاع",
     "toolbar.shape.roundRectangle": "مستطيل دائري الحواف",
@@ -62,8 +64,14 @@ const arTranslations: Translations = {
     "general.undo": "تراجع",
     "general.redo": "إعادة",
     "general.menu": "قائمة التطبيق",
+    "general.moreOptions": "خيارات إضافية",
     "general.duplicate": "تكرار",
     "general.delete": "حذف",
+
+    "general.copyToClipboard": "نسخ إلى الحافظة",
+    "general.copyToClipboard.svg": "SVG",
+    "general.copyToClipboard.pngWithoutBackground": "PNG (بدون خلفية)",
+    "general.copyToClipboard.pngWithBackground": "PNG (مع خلفية)",
 
     // Language
     "language.switcher": "اللغة",
@@ -71,11 +79,13 @@ const arTranslations: Translations = {
     "language.english": "English",
     "language.russian": "Русский",
     "language.arabic": "عربي",
+    'language.vietnamese': 'Tiếng Việt',
 
     // Menu items
     "menu.open": "فتح",
     "menu.saveFile": "حفظ الملف",
     "menu.exportImage": "تصدير صورة",
+    "menu.exportImage.svg": "SVG",
     "menu.exportImage.png": "PNG",
     "menu.exportImage.jpg": "JPG",
     "menu.cleanBoard": "مسح اللوحة",
@@ -114,9 +124,11 @@ const arTranslations: Translations = {
 
     // Tool popup items
     "popupToolbar.fillColor": "لون التعبئة",
+    "popupToolbar.fontSize": "حجم الخط",
     "popupToolbar.fontColor": "لون الخط",
     "popupToolbar.link": "إدراج رابط",
     "popupToolbar.stroke": "الحد",
+    'popupToolbar.opacity': 'مستوى شفافية',
 
     // Text placeholders
     "textPlaceholders.link": "رابط",
@@ -148,7 +160,7 @@ const arTranslations: Translations = {
   - ما الذي يمكن تشغيله 🐞 🚀
     - إذًا لا تلمسه 🛑 ✋
       - 👾 💥 🏹 🎯
-    
+
   ## ولد أم بنت  👶 ❓ 🤷 ♂️ ♀️
 
   ### Hello world 👋 🌍 ✨ 💻
@@ -161,7 +173,14 @@ const arTranslations: Translations = {
 
     // Mind map elements text
     "mind.centralText": "الموضوع المركزي",
-    "mind.abstractNodeText": "ملخص"
+    "mind.abstractNodeText": "ملخص",
+
+    'tutorial.title': 'Drawnix',
+    'tutorial.description': 'سبورة شاملة تتضمن الخرائط الذهنية والمخططات الانسيابية والرسم الحر وغير ذلك',
+    'tutorial.dataDescription': 'تُحفظ جميع البيانات محليًا في متصفحك',
+    'tutorial.appToolbar': 'تصدير، إعدادات اللغة، ...',
+    'tutorial.creationToolbar': 'اختر أداة لبدء الإنشاء',
+    'tutorial.themeDescription': 'التبديل بين السمة الفاتحة والداكنة',
 };
 
 export default arTranslations;

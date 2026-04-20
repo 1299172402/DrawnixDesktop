@@ -22,6 +22,8 @@ const enTranslations: Translations = {
   'toolbar.shape.ellipse': 'Ellipse — O',
   'toolbar.shape.triangle': 'Triangle',
   'toolbar.shape.terminal': 'Terminal',
+  'toolbar.shape.noteCurlyLeft': 'Curly Note — Left',
+  'toolbar.shape.noteCurlyRight': 'Curly Note — Right',
   'toolbar.shape.diamond': 'Diamond',
   'toolbar.shape.parallelogram': 'Parallelogram',
   'toolbar.shape.roundRectangle': 'Round Rectangle',
@@ -62,8 +64,13 @@ const enTranslations: Translations = {
   'general.undo': 'Undo',
   'general.redo': 'Redo',
   'general.menu': 'App Menu',
+  'general.moreOptions': 'More Options',
   'general.duplicate': 'Duplicate',
   'general.delete': 'Delete',
+  'general.copyToClipboard': 'Copy to Clipboard',
+  'general.copyToClipboard.svg': 'SVG',
+  'general.copyToClipboard.pngWithoutBackground': 'PNG (no background)',
+  'general.copyToClipboard.pngWithBackground': 'PNG (with background)',
 
   // Language
   'language.switcher': 'Language',
@@ -71,10 +78,12 @@ const enTranslations: Translations = {
   'language.english': 'English',
   'language.russian': 'Русский',
   'language.arabic': 'عربي',
+  'language.vietnamese': 'Tiếng Việt',
   // Menu items
   'menu.open': 'Open',
   'menu.saveFile': 'Save File',
   'menu.exportImage': 'Export Image',
+  'menu.exportImage.svg': 'SVG',
   'menu.exportImage.png': 'PNG',
   'menu.exportImage.jpg': 'JPG',
   'menu.cleanBoard': 'Clear Board',
@@ -116,9 +125,11 @@ const enTranslations: Translations = {
 
   // Tool popup items
   'popupToolbar.fillColor': 'Fill Color',
+  'popupToolbar.fontSize': 'Font Size',
   'popupToolbar.fontColor': 'Font Color',
   'popupToolbar.link': 'Insert Link',
   'popupToolbar.stroke': 'Stroke',
+  'popupToolbar.opacity': 'Opacity',
 
   // Text placeholders
   'textPlaceholders.link': 'Link',
@@ -149,7 +160,7 @@ const enTranslations: Translations = {
   - What can run 🐞 🚀
     - then do not touch it 🛑 ✋
       - 👾 💥 🏹 🎯
-    
+
   ## Boy or girl 👶 ❓ 🤷 ♂️ ♀️
 
   ### Hello world 👋 🌍 ✨ 💻
@@ -165,7 +176,8 @@ const enTranslations: Translations = {
   'mind.abstractNodeText': 'Summary',
 
   'tutorial.title': 'Drawnix',
-  'tutorial.description': 'All-in-one whiteboard, including mind maps, flowcharts, free drawing, and more',
+  'tutorial.description':
+    'All-in-one whiteboard, including mind maps, flowcharts, free drawing, and more',
   'tutorial.dataDescription': 'All data is stored locally in your browser',
   'tutorial.appToolbar': 'Export, language settings, ...',
   'tutorial.creationToolbar': 'Select a tool to start your creation',

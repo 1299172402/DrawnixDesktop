@@ -27,7 +27,7 @@ const MenuItem = ({
   const [isOpen, setIsOpen] = useState(false);
   const closeTimeoutRef = useRef<number>();
   const handleClick = useHandleMenuItemClick(rest.onClick, onSelect);
-  
+
   const menuItemContent = (
     <MenuItemContent icon={icon} shortcut={shortcut}>
       {children}
