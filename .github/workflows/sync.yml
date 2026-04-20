@@ -38,3 +38,5 @@ jobs:
       - name: Push changes
         run: |
           git push origin upstream-mirror --force
+        env:
+          GITHUB_TOKEN: ${{ secrets.SYNC_PAT }}
