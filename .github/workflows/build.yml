@@ -25,7 +25,7 @@ jobs:
         cache: 'npm'
     
     - name: Install dependencies
-      run: npm ci
+      run: npm install
 
     - name: Build Windows
       run: npm run electron:build:win
@@ -53,7 +53,7 @@ jobs:
         cache: 'npm'
     
     - name: Install dependencies
-      run: npm ci
+      run: npm install
 
     - name: Build macOS
       run: npm run electron:build:mac
@@ -81,7 +81,7 @@ jobs:
         cache: 'npm'
     
     - name: Install dependencies
-      run: npm ci
+      run: npm install
 
     - name: Build Linux
       run: npm run electron:build:linux
@@ -110,9 +110,6 @@ jobs:
       with:
         node-version: 20
         cache: 'npm'
-        
-    - name: Setup Gradle cache
-      uses: gradle/actions/setup-gradle@v3
     
     - name: Setup Java
       uses: actions/setup-java@v5
@@ -124,7 +121,7 @@ jobs:
       uses: android-actions/setup-android@v3.2.1
     
     - name: Install dependencies
-      run: npm ci
+      run: npm install
     
     - name: Build web application
       run: npm run build
@@ -177,7 +174,7 @@ jobs:
         path: artifacts
     
     - name: Create Release
-      uses: softprops/action-gh-release@v3
+      uses: softprops/action-gh-release@v1
       with:
         files: artifacts/**/*
         draft: true
