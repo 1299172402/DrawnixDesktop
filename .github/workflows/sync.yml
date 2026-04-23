@@ -18,7 +18,7 @@ jobs:
         with:
           ref: upstream-mirror
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.WORKFLOW_TOKEN }}
       
       - name: Configure Git
         run: |
