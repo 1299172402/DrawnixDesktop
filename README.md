@@ -88,5 +88,5 @@
 ---
 
 <div align="center">
-  <sub>Created with ❤️ by <a href="https://github.com/1299172402">之雨</a> on 🌏</sub>
+  <sub>Created with ❤️ by <a href="https://github.com/1299172402">之雨</a> on 🌏</sub>。
 </div>
